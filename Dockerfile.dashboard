@@ -1,0 +1,21 @@
+# Dockerfile.dashboard
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Copia e instala dependencias
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia la app y el código
+COPY streamlit_app.py ./streamlit_app.py
+COPY kaggle_dataset ./kaggle_dataset
+
+# Variable de entorno para Atlas
+ENV MONGO_URI="mongodb+srv://andresgh12:Usb2707@cluster0.ps8mf41.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
+# Expone el puerto de Streamlit
+EXPOSE 8501
+
+# Comando para lanzar Streamlit
+CMD ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
