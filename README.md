@@ -55,7 +55,8 @@ Se emplea Streamlit para crear una interfaz web que consulta directamente MongoD
 
 ### Imagen de ejemplo del dashboard
 
-![Dashboard de Datos de Fútbol](dashboard_screenshot.png)
+![image](https://github.com/user-attachments/assets/e3ec9f79-9482-4871-a85e-e08590e09f2d)
+
 
 ### Comandos
 
@@ -81,7 +82,8 @@ Una vez ejecutado el ETL, podrás comprobar las colecciones y registros cargados
 
 ### Datos cargados en Atlas
 
-![Datos en MongoDB Atlas](mongodb_screenshot.png)
+![image](https://github.com/user-attachments/assets/42a3385b-ff0a-44a0-82b9-5dd2cad3eab8)
+
 
 ---
 
